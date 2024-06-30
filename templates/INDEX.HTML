@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GREEN-API Test Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>GREEN-API Test Page</h1>
+        <div class="input-field">
+            <label for="idInstance">ID Instance:</label>
+            <input type="text" id="idInstance">
+        </div>
+        <div class="input-field">
+            <label for="apiTokenInstance">API Token Instance:</label>
+            <input type="text" id="apiTokenInstance">
+        </div>
+        <div class="input-field">
+            <label for="chatId">Chat ID:</label>
+            <input type="text" id="chatId" value="+77772000270@c.us">
+        </div>
+        <div class="input-field">
+            <label for="message">Message:</label>
+            <input type="text" id="message">
+        </div>
+        <div class="input-field">
+            <button class="small-button" onclick="sendMessage()">Send Message</button>
+        </div>
+        <div class="input-field margin-top-10">
+            <label for="fileInput">Select File:</label>
+            <input type="file" id="fileInput" class="small-button" onchange="handleFileSelect(event)">
+        </div>
+        <div class="input-field margin-top-10">
+            <button class="small-button" onclick="sendFileByUrl()">Send File</button>
+        </div>
+        <div class="button-group margin-top-10">
+            <button onclick="getSettings()">getSettings</button>
+            <button onclick="getStateInstance()">getStateInstance</button>
+        </div>
+        <div class="response-field" id="responseField"></div>
+    </div>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
